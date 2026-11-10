@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --canvas: #2b2e33;
+  --surface: #ffffff;
+  --ink: #1c1e22;
+  --muted: #6b7078;
+  --chip: #f0f1f3;
+  --chip-hover: #e3e5e8;
+  --line: #e3e5e8;
+  --nav: rgba(255, 255, 255, 0.92);
+  --dot: rgba(255, 255, 255, 0.07);
+  --track: #d4d6da;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --on-canvas: #f3f4f6;
+  --on-canvas-muted: #b7bcc4;
+  --screen: 100%;
+  background-color: var(--canvas);
+  color: var(--ink);
+}
+
+html.dark {
+  color-scheme: dark;
+  --canvas: #17191c;
+  --surface: #24262b;
+  --ink: #f3f4f6;
+  --muted: #a0a4ab;
+  --chip: #31343a;
+  --chip-hover: #3c4047;
+  --line: #3c4047;
+  --nav: rgba(36, 38, 43, 0.92);
+  --dot: rgba(255, 255, 255, 0.06);
+  --track: #3c4047;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  filter: brightness(var(--screen));
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: var(--canvas);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.cabin {
+  background-color: var(--canvas);
+  background-image: radial-gradient(var(--dot) 0.7px, transparent 0.7px);
+  background-size: 16px 16px;
+  color: var(--ink);
+}
+
+input[type='range'] {
+  accent-color: #ff6600;
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-chip {
+  background-color: var(--chip);
+}
+
+.bg-nav {
+  background-color: var(--nav);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-on-canvas {
+  color: var(--on-canvas);
+}
+
+.text-on-canvas-muted {
+  color: var(--on-canvas-muted);
+}
+
+.hover\:bg-white\/10:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover\:text-on-canvas:hover {
+  color: var(--on-canvas);
+}
+
+.border-line {
+  border-color: var(--line);
+}
+
+.bg-mint {
+  background-color: #ff6600;
+}
+
+.text-mint {
+  color: #ff6600;
+}
+
+.shadow-card {
+  box-shadow: var(--shadow);
+}
+
+.hover\:bg-chip:hover {
+  background-color: var(--chip-hover);
+}
+
+.hover\:text-ink:hover {
+  color: var(--ink);
+}
+
+.focus-visible\:outline-mint:focus-visible {
+  outline-color: #ff6600;
+}
+
+.enabled\:active\:bg-mint:active:enabled {
+  background-color: #ff6600;
+}

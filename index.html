@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E53 X5 Headunit</title>
+    <script>
+      try {
+        if (localStorage.getItem('headunit-theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+        }
+        var brightness = Number(localStorage.getItem('headunit-brightness'))
+        if (brightness >= 40 && brightness <= 100) {
+          document.documentElement.style.setProperty('--screen', brightness + '%')
+        }
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "name": "Cabin Light",
+  "sources": {
+    "graticule": {
+      "type": "geojson",
+      "data": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#2b2e33"
+      }
+    }
+  ]
+}
